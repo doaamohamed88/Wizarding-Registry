@@ -5,17 +5,16 @@
 
 @custom-variant dark (&:is(.dark *));
 :root {
-  --color-primary:  #FFB95F;
-  --color-secondary: #D4E4FA;
-  --color-background: #ffffff;
-  --color-text: #000000;
-  --background:  oklch(1 0 0);
-  --foreground:  oklch(0.145 0 0);
-  --card:  oklch(1 0 0);
+  --primary:  #FFB95F;
+  /* --color-background: #ffffff; */
+  --color-text: #D4E4FA;
+  --background:  #051424;
+  --foreground:  #D4E4FA;
+  --card:  #051424CC;
+;
   --card-foreground:  oklch(0.145 0 0);
   --popover:  oklch(1 0 0);
   --popover-foreground:  oklch(0.145 0 0);
-  --primary:  oklch(0.205 0 0);
   --primary-foreground:  oklch(0.985 0 0);
   --secondary:  oklch(0.97 0 0);
   --secondary-foreground:  oklch(0.205 0 0);
@@ -33,8 +32,9 @@
   --chart-4:  oklch(0.371 0 0);
   --chart-5:  oklch(0.269 0 0);
   --radius:  0.625rem;
-  --sidebar:  oklch(0.985 0 0);
-  --sidebar-foreground:  oklch(0.145 0 0);
+  --sidebar: #0D1C2D;
+  --sidebar-foreground:  #CBC3D7;
+;
   --sidebar-primary:  oklch(0.205 0 0);
   --sidebar-primary-foreground:  oklch(0.985 0 0);
   --sidebar-accent:  oklch(0.97 0 0);
@@ -44,9 +44,10 @@
 }
 
 @theme inline {
+ --color-primary: var(--primary);
   --font-heading:  var(--font-sans);
-  --font-sans:  'Geist Variable', sans-serif;
-  --color-sidebar-ring:  var(--sidebar-ring);
+--font-sans: 'Manrope', sans-serif; 
+ --color-sidebar-ring:  var(--sidebar-ring);
   --color-sidebar-border:  var(--sidebar-border);
   --color-sidebar-accent-foreground:  var(--sidebar-accent-foreground);
   --color-sidebar-accent:  var(--sidebar-accent);
@@ -125,7 +126,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground min-h-screen antialiased;
   }
   html {
     @apply font-sans;
